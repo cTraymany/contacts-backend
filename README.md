@@ -1,24 +1,35 @@
-# README
+# Contacts
+This Rails with React-Redux application allows users to organize their contacts in one single page.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Getting Started
+### Prerequisites
+This app is run with React-Redux and Javascript. Please have both libraries installed before beginning.
 
-* Ruby version
+Fork and clone this repository onto your terminal.
 
-* System dependencies
+Navigate to https://github.com/cTraymany/contacts-frontend.
+Fork and clone this respository onto your terminal.
 
-* Configuration
+### Installing
+    <!-- Backend -->
+    $ bundle install
+    $ rake db:migrate
+    $ rails s
 
-* Database creation
+    <!-- Frontend -->
+    $ npm start
 
-* Database initialization
+    You will be prompted to start in a new server. Enter 'Y' and the application will be opened in the browser.
 
-* How to run the test suite
+### Built With
+[VS Code](https://code.visualstudio.com/) - text editor
 
-* Services (job queues, cache servers, search engines, etc.)
+### Contributing
+See CONTRIBUTING.md for details on code of conduct.
 
-* Deployment instructions
+### Authors
+Chindalath Traymany - cTraymany
 
-* ...
+### License
+This project is licensed under the MIT License - see LICENSE.md for details
