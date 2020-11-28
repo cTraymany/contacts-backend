@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# goup_id: 1
+family = Group.create(name: "Family")
+
+mom = Contact.create(name: "Mom", group_id: 1, phoneNumber: 1234567890, birthday: Time.new(2020, 2, 2).strftime("%m/%d/%Y"))
+dad = Contact.create(name: "dad", group_id:1, phoneNumber: 1123456789, birthday: Time.new(2020, 2, 2).strftime("%m/%d/%Y"))
+
+
+# group_id: 2
+friends = Group.create(name: "Friends")
+chromeBoy = Contact.create(name: "Chrome Boy", group_id: 2, phoneNumber: 1010101010, birthday: Time.new(2020, 2, 2).strftime("%m/%d/%Y"))

@@ -16,14 +16,13 @@ ActiveRecord::Schema.define(version: 2020_11_28_193231) do
     t.integer "group_id"
     t.string "name"
     t.integer "phoneNumber"
-    t.datetime "birthday"
+    t.date "birthday"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
-    t.integer "size"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

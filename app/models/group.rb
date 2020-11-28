@@ -1,4 +1,4 @@
 class Group < ApplicationRecord
     has_many :contacts
-    validates :name, :size, presence: true
+    validates :name, presence: true
 end
