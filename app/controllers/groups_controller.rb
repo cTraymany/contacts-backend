@@ -1,4 +1,4 @@
-class Api::V1::GroupsController < ApplicationController
+class GroupsController < ApplicationController
     def index
         render json: Group.all
     end
