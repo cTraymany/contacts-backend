@@ -1,4 +1,4 @@
 class Group < ApplicationRecord
     has_many :contacts, dependent: :destroy
-    validates :name, presence: true
+    validates :name, presence: true, uniqueness: true
 end
