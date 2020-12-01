@@ -39,3 +39,5 @@ class ContactsController < ApplicationController
         params.require(:contact).permit(:name, :phoneNumber, :birthday, :group_id)
     end
 end
+
+# test!!
