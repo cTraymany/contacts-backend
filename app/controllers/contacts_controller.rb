@@ -1,26 +1,36 @@
 class ContactsController < ApplicationController    
     def index
         if params[:group_id]
-            render json: Group.find(params[:group_id]).contacts
+            contacts = Group.find(params[:group_id]).contacts
+            render json: ContactSerializer.new(contacts)
         else
-            render json: Contact.all
+            render json: ContactSerializer.new(Contact.all)
         end
     end
 
     def create
         contact = Contact.new(contact_params)
         if contact.save
-            render json: contact
+            render json: ContactSerializer.new(contact)
+        else
+            render json: {message: "Please try again."}
         end
     end
 
     def show
-        render json: Contact.find(params[:id])
+        if contact = Contact.find(params[:id])
+            render json: ContactSerializer.new(contact)
+        else
+            render json: {message: "Please try again."}
+        end
     end
 
     def destroy
-        contact = Contact.find(params[:id])
-        contact.destroy
+        if contact = Contact.find(params[:id])
+            contact.destroy
+        else
+            render json: {message: "Please try again."}
+        end
     end
 
     private
