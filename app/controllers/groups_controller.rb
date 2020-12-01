@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
     def create
         group = Group.new(group_params)
         if group.save
-            render json: group
+            render json: GroupSerializer.new(group)
         else
             render json: {message: "Please try again."}
         end
@@ -14,12 +14,15 @@ class GroupsController < ApplicationController
 
     def show
         group = Group.find(params[:id])
-        render json: group
+        render json: GroupSerializer.new(group)
     end
 
     def destroy
-        group = Group.find(params[:id])
-        group.destroy
+        if group = Group.find(params[:id])
+            group.destroy
+        else
+            render json: {message: "Please try again."}
+        end
     end
 
     private
