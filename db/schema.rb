@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_28_193231) do
+ActiveRecord::Schema.define(version: 2020_12_01_182558) do
 
   create_table "contacts", force: :cascade do |t|
     t.integer "group_id"
     t.string "name"
-    t.integer "phoneNumber"
-    t.date "birthday"
+    t.string "phoneNumber"
+    t.string "birthday"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

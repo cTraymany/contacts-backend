@@ -1,8 +1,8 @@
 # goup_id: 1
 family = Group.create(name: "Family")
 
-mom = Contact.create(name: "Mom", group_id: 1, phoneNumber: 1234567890, birthday: Time.new(2020, 2, 2).strftime("%m/%d/%Y"))
-dad = Contact.create(name: "dad", group_id:1, phoneNumber: 1123456789, birthday: Time.new(2020, 2, 2).strftime("%m/%d/%Y"))
+mom = Contact.create(name: "Mom", group_id: 1, phoneNumber: "123-456-7890", birthday: Time.new(2020, 2, 2).strftime("%m/%d/%Y"))
+dad = Contact.create(name: "dad", group_id: 1, phoneNumber: "112-345-6789", birthday: Time.new(2020, 2, 2).strftime("%m/%d/%Y"))
 
 
 # group_id: 2
