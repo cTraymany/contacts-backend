@@ -26,8 +26,11 @@ class ContactsController < ApplicationController
     end
 
     def destroy
+        # binding.pry
         if contact = Contact.find(params[:id])
+            # group = Group.find(contact.group_id)
             contact.destroy
+            render json: ContactSerializer.new(contact)
         else
             render json: {message: "Please try again."}
         end
@@ -35,7 +38,7 @@ class ContactsController < ApplicationController
 
     private
 
-    def contact_params(args)
+    def contact_params
         params.require(:contact).permit(:name, :phoneNumber, :birthday, :group_id)
     end
 end
