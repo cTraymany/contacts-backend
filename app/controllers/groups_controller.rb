@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
         if group.save
             render json: GroupSerializer.new(group)
         else
-            render json: {message: "Please try again."}
+            render json: {error: "Please try again."}
         end
     end
 
@@ -17,13 +17,13 @@ class GroupsController < ApplicationController
         render json: GroupSerializer.new(group)
     end
 
-    def destroy
-        if group = Group.find(params[:id])
-            group.destroy
-        else
-            render json: {message: "Please try again."}
-        end
-    end
+    # def destroy
+    #     if group = Group.find(params[:id])
+    #         group.destroy
+    #     else
+    #         render json: {message: "Please try again."}
+    #     end
+    # end
 
     private
 

@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
         if contact.save
             render json: ContactSerializer.new(contact)
         else
-            render json: {message: "Please try again."}
+            render json: {error: "Please try again."}
         end
     end
 
@@ -21,18 +21,16 @@ class ContactsController < ApplicationController
         if contact = Contact.find(params[:id])
             render json: ContactSerializer.new(contact)
         else
-            render json: {message: "Please try again."}
+            render json: {error: "Please try again."}
         end
     end
 
     def destroy
-        # binding.pry
         if contact = Contact.find(params[:id])
-            # group = Group.find(contact.group_id)
             contact.destroy
             render json: ContactSerializer.new(contact)
         else
-            render json: {message: "Please try again."}
+            render json: {error: "Please try again."}
         end
     end
 
