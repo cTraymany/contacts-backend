@@ -3,7 +3,7 @@ Use this Rails with React-Redux application to organize your contacts in one sin
 
 ## Getting Started
 ### Prerequisites
-This app is run with React-Redux and Javascript. Please have both libraries installed before beginning.
+This app is run with Ruby and Javascript. Please have both libraries installed before beginning.
 
 Fork and clone the backend and frontend repositories (linked below) onto your terminal.
 
